@@ -67,6 +67,18 @@ Les sources de données (PDF, videos ou site web) sont notées dans chaque fichi
 
   > ([Tutoriel vidéo](https://www.youtube.com/watch?v=HW0RPaJqm4g))
 
+### Convention de nommage des pull requests
+:warning: Rappel: un seul nouveau fichier YAML par PR.
+
+Lorsque vous faites une pull request, il convient de respecter les règles de nommage suivantes:
+
+- Pour l'ajout d'un nouveau fichier YAML : `ADD nom_de_de_source jj/mm`
+  > Exemple avec le fichier du 24 mars de l'ARS de La Réunion : `ADD ARS La Réunion 24/03`
+
+- Pour une correction sur un fichier YAML existant :  `FIX nom_de_la_source jj/mm`
+  > Exemple avec le fichier du 20 mars de Santé Publique France : `FIX SPF 20/03`
+
+
 ### Comment compléter les fichiers YAML
 
 Consignes générales :   
@@ -98,18 +110,18 @@ Notez que le lien peut prendre du temps avant d'être fonctionnel. Il est égale
 
 ##### Les données nationales
 
-* `casConfirmes` : nombre de cas confirmés
-* `deces` : nombre de décès
-* `hospitalises` : nombre de personnes hospitalisées
-* `reanimation` : nombre de personnes en réanimation
-* `gueris` : nombre de personnes guéries (sorties de l'hôpital)
-* `depistes` : nombre de personnes dépistées (testées par PCR)
+* `casConfirmes` : total cumulé du nombre de cas confirmés
+* `deces` : total cumulé du nombre de décès
+* `hospitalises` : nombre de personnes hospitalisées **le jour du bulletin**
+* `reanimation` : nombre de personnes en réanimation **le jour du bulletin**
+* `gueris` : total cumulé du nombre de personnes guéries (sorties de l'hôpital)
+* `depistes` : total cumulé du nombre de personnes dépistées (testées par PCR)
 
 ##### Les données internationales
 
-* `casConfirmes` : nombre de cas confirmés au niveau mondial
-* `gueris` : nombre de cas guéris au niveau mondial
-* `deces` : nombre de décès au niveau mondial
+* `casConfirmes` : total cumulé du nombre de cas confirmés au niveau mondial
+* `gueris` : total cumulé du nombre de cas guéris au niveau mondial
+* `deces` : total cumulé du nombre de décès au niveau mondial
 * `paysTouches` : nombre de pays touchés
 
 ####  Autres données collectées (si elles sont mentionnées dans les sources)
